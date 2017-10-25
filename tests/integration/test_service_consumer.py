@@ -54,3 +54,19 @@ class TestConsumerService(unittest.TestCase):
         # Delete
         response = client.consumers.delete(create_payload['username'])
         assert response is None
+
+    def test_add_key(self):
+        client = self.client
+        payload = {
+            'username': str(uuid4())
+        }
+
+        response = client.consumers.create(payload)
+        assert response.get('username') == payload['username']
+
+        response = client.consumers.add_key(payload['username'])
+        assert response.get('key')
+
+        key = str(uuid4())
+        response = client.consumers.add_key(payload['username'], key)
+        assert key == response.get('key')

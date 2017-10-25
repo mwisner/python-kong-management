@@ -73,10 +73,6 @@ class Request(object):
         else:
             resp = self.http_session.request(
                 self.http_method, url, timeout=self.timeout, verify=certifi.where(), **req_params)
-
-
-        from pprint import pprint
-        pprint(resp.__dict__)
         # response logging
         if logger.isEnabledFor(logging.DEBUG):
             logger.debug("Response received from %s", url)
