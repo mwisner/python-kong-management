@@ -32,7 +32,7 @@ setup(
     author="Matt Wisner",
     author_email='mwisner@fourthlab.com',
     url='https://github.com/mwisner/python-kong-management',
-    packages=find_packages(include=['kong']),
+    packages=find_packages(),
     include_package_data=True,
     install_requires=requirements,
     license="MIT license",
