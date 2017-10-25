@@ -20,7 +20,7 @@ except ImportError:
     from urllib.request import urlopen
 
 
-GITHUB_REPO = 'mwisner/python_kong_management'
+GITHUB_REPO = 'mwisner/python-kong-management'
 TRAVIS_CONFIG_FILE = os.path.join(
     os.path.dirname(os.path.abspath(__file__)), '.travis.yml')
 
