@@ -55,7 +55,7 @@ class TestConsumerService(unittest.TestCase):
         response = client.consumers.delete(create_payload['username'])
         assert response is None
 
-    def test_add_key(self):
+    def test_key_auth_lifecycle(self):
         client = self.client
         payload = {
             'username': str(uuid4())
@@ -70,3 +70,6 @@ class TestConsumerService(unittest.TestCase):
         key = str(uuid4())
         response = client.consumers.add_key(payload['username'], key)
         assert key == response.get('key')
+
+        response = client.consumers.remove_key(payload['username'], key)
+        assert response is None

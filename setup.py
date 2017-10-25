@@ -27,7 +27,7 @@ test_requirements = [
 setup(
     name='python_kong_management',
     version='0.2.4',
-    description="Python api wrapper for Kong API Gatway",
+    description="Python api wrapper for Kong API Gateway",
     long_description=readme + '\n\n' + history,
     author="Matt Wisner",
     author_email='mwisner@fourthlab.com',

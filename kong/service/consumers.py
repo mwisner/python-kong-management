@@ -79,4 +79,11 @@ class Consumers(BaseService):
         response = self.client.post('consumers/%s/key-auth' % username_or_id, payload)
         return response
 
+    def remove_key(self, username_or_id, key_id):
+        response = self.client.delete('consumers/%s/key-auth/%s' % (username_or_id, key_id))
+        return response
+
+
+
+
 
