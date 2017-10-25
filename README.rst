@@ -30,11 +30,12 @@ Features
 
 * TODO
 
-Credits
+Testing
 ---------
-
-This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
-
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
-
+```bash
+cp .env.example .env
+python3 -m venv venv
+source venv
+eval $(cat .env | sed 's/^/export /')
+setup.py pytest
+```
