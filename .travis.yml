@@ -14,5 +14,5 @@ deploy:
     secure: T5gqsk+f8cZ7lAxJ+J+d8gqzHujdyehdzj26aNrDd8hRx+OsjO/esZajcosSGOHuEXJnDYHB/AOeaGmcDYI/mhwhbEtA89fniiHivN2Qm6JJgIRGmmOszx1c+DkIjV7xWQphVjceDaPjfKYVK5K/OCjlD/GCvDqkJLruvF/g/lHYn6miSPhne1orrbnRjnm/jhH6CCfDHGaNCQtSIYBwcJz7B06/JG4uE+7nLhTBcg5Z6d1dvl/cxgJRByj2leMP4SCJwUDrvn9CezybbzHs5UskgyKp5i79MuozUKK8Fkbii6fy6YUX8LfE7SCEc3MHwhC9uPEQahBsyrrj2zCtS4nT4C1nyN+CmVIaQoDIkmjQxi7qMxhymvnkvCjzQtPyVy+T970QlSB/zTtC0SRDMn1NRHZQvdT+aySIIEuZ2HWK8YRkpjNzY05oKH9Ll3UC1pCH7evr6tXDs367fIb6nMaCkQ8O6vy5nQdcnr/00NGljwGESUoAs3bAN9EUZGQGMiPlyw6O+XtKybvIPyffgcJiTEcoXWzPYJulmp0cbLdfAgCF6rZz6DWhY1WgpVOFnSsvuKuCldDuBVkiuiHK1OFdL7TgGpiEG3RBcshP0z2rM4uF6aCP3YFiY4GUq2360m81GaUhACpHNBbxCZyZwWr6RZNFaEy85M43EAQLtWk=
   on:
     tags: true
-    repo: mwisner/python_kong_management
+    repo: mwisner/python-kong-management
     python: 3.6
