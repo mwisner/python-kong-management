@@ -29,6 +29,7 @@ class Request(object):
         self.http_session = http_session
 
     def execute(self, base_url, auth, params):
+
         return self.send_request_to_path(base_url, auth, params)
 
     def send_request_to_path(self, base_url, auth, params=None):
@@ -49,7 +50,7 @@ class Request(object):
             'Accept': 'application/json',
         }
 
-        if self.http_method in ('POST', 'PUT', 'DELETE'):
+        if self.http_method in ('POST', 'PUT', 'PATCH', 'DELETE'):
             headers['content-type'] = 'application/json'
             req_params['data'] = json.dumps(params, cls=ResourceEncoder)
         elif self.http_method == 'GET':
@@ -73,6 +74,9 @@ class Request(object):
             resp = self.http_session.request(
                 self.http_method, url, timeout=self.timeout, verify=certifi.where(), **req_params)
 
+
+        from pprint import pprint
+        pprint(resp.__dict__)
         # response logging
         if logger.isEnabledFor(logging.DEBUG):
             logger.debug("Response received from %s", url)

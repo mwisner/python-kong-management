@@ -2,8 +2,17 @@ from .base_service import BaseService
 from kong.errors import KongError
 
 
-class Status(BaseService):
-    def get(self):
+class Node(BaseService):
+
+    def information(self):
+        """
+
+        :return:
+        """
+        response = self.client.get('/')
+        return response
+
+    def status(self):
         """
 
         :return:

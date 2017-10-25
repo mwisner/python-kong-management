@@ -23,9 +23,14 @@ class Client(object):
         return None
 
     @property
-    def status(self):
-        from .service import status
-        return status.Status(self)
+    def node(self):
+        from .service import node
+        return node.Node(self)
+
+    @property
+    def consumers(self):
+        from .service import consumers
+        return consumers.Consumers(self)
 
     def _execute_request(self, request, params):
         result = request.execute(self.base_url, self._auth, params)
@@ -51,7 +56,7 @@ class Client(object):
         req = request.Request('PATCH', path, self.http_session)
         return self._execute_request(req, params)
 
-    def delete(self, path, params):
+    def delete(self, path, params = {}):
         from . import request
         req = request.Request('DELETE', path, self.http_session)
         return self._execute_request(req, params)
