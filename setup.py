@@ -26,7 +26,7 @@ test_requirements = [
 
 setup(
     name='python_kong_management',
-    version='0.2.1',
+    version='0.2.2',
     description="Python api wrapper for Kong API Gatway",
     long_description=readme + '\n\n' + history,
     author="Matt Wisner",
