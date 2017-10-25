@@ -24,12 +24,12 @@ class Client(object):
 
     @property
     def node(self):
-        from .service import node
+        from kong.service import node
         return node.Node(self)
 
     @property
     def consumers(self):
-        from .service import consumers
+        from kong.service import consumers
         return consumers.Consumers(self)
 
     def _execute_request(self, request, params):
