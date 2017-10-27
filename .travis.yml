@@ -4,7 +4,7 @@ python:
 - 3.5
 - 3.4
 - 3.3
-install: pip install -U tox-travis
+install: pip install -U --pre setuptools tox tox-travis
 script: tox
 deploy:
   provider: pypi
